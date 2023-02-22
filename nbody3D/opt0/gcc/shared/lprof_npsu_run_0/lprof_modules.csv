@@ -1,0 +1,4 @@
+name;time_p;time_s;cpi_ratio;
+/usr/lib/x86_64-linux-gnu/libm-2.31.so;69.39;52.7;;
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-22_13-30-08/binaries/nbody3D;30.6;23.25;;
+/usr/lib/x86_64-linux-gnu/libc-2.31.so;0.01;0;;

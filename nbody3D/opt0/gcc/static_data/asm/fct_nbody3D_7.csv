@@ -1,0 +1,91 @@
+address;source_location;insn;indent
+0x138a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;ENDBR64;
+0x138e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;PUSH	%R14;
+0x1390;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;PUSH	%R13;
+0x1392;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;PUSH	%R12;
+0x1394;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;PUSH	%RBP;
+0x1395;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;PUSH	%RBX;
+0x1396;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;SUB	$0x20,%RSP;
+0x139a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;VMOVSS	%XMM0,0x1c(%RSP);
+0x13a0;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;TEST	%RSI,%RSI;
+0x13a3;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;JE	151e <move_particles+0x194>;
+0x13a9;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;MOV	%RDI,%RBP;
+0x13ac;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;MOV	%RDI,%R12;
+0x13af;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;LEA	(%RSI,%RSI,2),%RAX;
+0x13b3;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;LEA	(%RDI,%RAX,8),%R13;
+0x13b7;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;JMP	13fe <move_particles+0x74>;
+0x13b9;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:81;VMOVSS	0x1c(%RSP),%XMM5;(3) 
+0x13bf;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:81;VMULSS	0x4(%RSP),%XMM5,%XMM0;(3) 
+0x13c5;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:81;VADDSS	0xc(%R14),%XMM0,%XMM0;(3) 
+0x13cb;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:81;VMOVSS	%XMM0,0xc(%R14);(3) 
+0x13d1;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:82;VMULSS	%XMM7,%XMM5,%XMM0;(3) 
+0x13d5;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:82;VADDSS	0x10(%R14),%XMM0,%XMM0;(3) 
+0x13db;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:82;VMOVSS	%XMM0,0x10(%R14);(3) 
+0x13e1;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:83;VMULSS	%XMM6,%XMM5,%XMM0;(3) 
+0x13e5;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:83;VADDSS	0x14(%R14),%XMM0,%XMM0;(3) 
+0x13eb;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:83;VMOVSS	%XMM0,0x14(%R14);(3) 
+0x13f1;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;ADD	$0x18,%RBP;(3) 
+0x13f5;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;CMP	%R13,%RBP;(3) 
+0x13f8;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:57;JE	14d2 <move_particles+0x148>;(3) 
+0x13fe;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:52;MOV	%R12,%RBX;(3) 
+0x1401;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:62;VXORPS	%XMM6,%XMM6,%XMM6;(3) 
+0x1405;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:62;VMOVSS	%XMM6,0xc(%RSP);(3) 
+0x140b;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:61;VMOVSS	%XMM6,0x8(%RSP);(3) 
+0x1411;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:60;VMOVSS	%XMM6,0x4(%RSP);(3) 
+0x1417;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:60;MOV	%RBP,%R14;(3) 
+0x141a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:68;VMOVSS	(%RBX),%XMM0;  (1) 
+0x141e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:68;VSUBSS	(%RBP),%XMM0,%XMM2;  (1) 
+0x1423;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:69;VMOVSS	0x4(%RBX),%XMM0;  (1) 
+0x1428;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:69;VSUBSS	0x4(%RBP),%XMM0,%XMM3;  (1) 
+0x142d;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:70;VMOVSS	0x8(%RBX),%XMM0;  (1) 
+0x1432;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:70;VSUBSS	0x8(%RBP),%XMM0,%XMM4;  (1) 
+0x1437;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMOVSS	%XMM2,0x10(%RSP);  (1) 
+0x143d;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMULSS	%XMM2,%XMM2,%XMM0;  (1) 
+0x1441;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMOVSS	%XMM3,0x14(%RSP);  (1) 
+0x1447;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMULSS	%XMM3,%XMM3,%XMM1;  (1) 
+0x144b;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VADDSS	%XMM1,%XMM0,%XMM0;  (1) 
+0x144f;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMOVSS	%XMM4,0x18(%RSP);  (1) 
+0x1455;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VMULSS	%XMM4,%XMM4,%XMM1;  (1) 
+0x1459;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VADDSS	%XMM1,%XMM0,%XMM0;  (1) 
+0x145d;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:71;VADDSS	0xcc7(%RIP),%XMM0,%XMM0;  (1) 
+0x1465;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:72;VCVTSS2SD	%XMM0,%XMM0,%XMM0;  (1) 
+0x1469;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:72;MOV	0xcc8(%RIP),%RAX;  (1) 
+0x1470;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:72;VMOVQ	%RAX,%XMM1;  (1) 
+0x1475;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:72;CALL	1100 <.plt.sec@start+0x20>;  (1) 
+0x147a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:72;VCVTSD2SS	%XMM0,%XMM0,%XMM0;  (1) 
+0x147e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:75;VMOVSS	0x10(%RSP),%XMM2;  (1) 
+0x1484;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:75;VDIVSS	%XMM0,%XMM2,%XMM1;  (1) 
+0x1488;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:75;VADDSS	0x4(%RSP),%XMM1,%XMM5;  (1) 
+0x148e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:75;VMOVSS	%XMM5,0x4(%RSP);  (1) 
+0x1494;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:76;VMOVSS	0x14(%RSP),%XMM3;  (1) 
+0x149a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:76;VDIVSS	%XMM0,%XMM3,%XMM1;  (1) 
+0x149e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:76;VADDSS	0x8(%RSP),%XMM1,%XMM7;  (1) 
+0x14a4;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:76;VMOVSS	%XMM7,0x8(%RSP);  (1) 
+0x14aa;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:77;VMOVSS	0x18(%RSP),%XMM4;  (1) 
+0x14b0;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:77;VDIVSS	%XMM0,%XMM4,%XMM0;  (1) 
+0x14b4;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:77;VADDSS	0xc(%RSP),%XMM0,%XMM6;  (1) 
+0x14ba;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:77;VMOVSS	%XMM6,0xc(%RSP);  (1) 
+0x14c0;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:65;ADD	$0x18,%RBX;  (1) 
+0x14c4;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:65;CMP	%R13,%RBX;  (1) 
+0x14c7;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:65;JNE	141a <move_particles+0x90>;  (1) 
+0x14cd;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:65;JMP	13b9 <move_particles+0x2f>;(3) 
+0x14d2;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:89;VMOVSS	0x1c(%RSP),%XMM7;(2) 
+0x14d8;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:89;VMULSS	0xc(%R12),%XMM7,%XMM0;(2) 
+0x14df;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:89;VADDSS	(%R12),%XMM0,%XMM0;(2) 
+0x14e5;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:89;VMOVSS	%XMM0,(%R12);(2) 
+0x14eb;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:90;VMULSS	0x10(%R12),%XMM7,%XMM0;(2) 
+0x14f2;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:90;VADDSS	0x4(%R12),%XMM0,%XMM0;(2) 
+0x14f9;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:90;VMOVSS	%XMM0,0x4(%R12);(2) 
+0x1500;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:91;VMULSS	0x14(%R12),%XMM7,%XMM0;(2) 
+0x1507;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:91;VADDSS	0x8(%R12),%XMM0,%XMM0;(2) 
+0x150e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:91;VMOVSS	%XMM0,0x8(%R12);(2) 
+0x1515;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:87;ADD	$0x18,%R12;(2) 
+0x1519;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:87;CMP	%R13,%R12;(2) 
+0x151c;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:87;JNE	14d2 <move_particles+0x148>;(2) 
+0x151e;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;ADD	$0x20,%RSP;
+0x1522;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;POP	%RBX;
+0x1523;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;POP	%RBP;
+0x1524;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;POP	%R12;
+0x1526;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;POP	%R13;
+0x1528;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;POP	%R14;
+0x152a;/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:93;RET;

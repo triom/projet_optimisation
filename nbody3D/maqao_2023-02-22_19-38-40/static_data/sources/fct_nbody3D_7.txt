@@ -1,0 +1,45 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 140 - 181
+--------------------------------------------------------------------------------
+
+140: {
+141:   //
+142:   const f32 softening = 1e-20;
+143: 
+144:   //
+145:   for (u64 i = 0; i < n; i++)
+146:   {
+147:     //
+148:     f32 fx = 0.0;
+149:     f32 fy = 0.0;
+150:     f32 fz = 0.0;
+151: 
+152:     // 23 floating-point operations
+153:     for (u64 j = 0; j < n; j++)
+154:     {
+155:       // Newton's law
+156:       const f32 dx = p[j].x - p[i].x;                                // 1 (sub)
+157:       const f32 dy = p[j].y - p[i].y;                                // 2 (sub)
+158:       const f32 dz = p[j].z - p[i].z;                                // 3 (sub)
+159:       const f32 d_2 = (dx * dx) + (dy * dy) + (dz * dz) + softening; // 9 (mul, add)
+160:       const f32 d_3_over_2 = pow(d_2, 3.0 / 2.0);                    // 11 (pow, div)
+161: 
+162:       // Net force
+163:       fx += dx / d_3_over_2; // 13 (add, div)
+164:       fy += dy / d_3_over_2; // 15 (add, div)
+165:       fz += dz / d_3_over_2; // 17 (add, div)
+166:     }
+167: 
+168:     //
+169:     p[i].vx += dt * fx; // 19 (mul, add)
+170:     p[i].vy += dt * fy; // 21 (mul, add)
+171:     p[i].vz += dt * fz; // 23 (mul, add)
+172:   }
+173: 
+174:   // 3 floating-point operations
+175:   for (u64 i = 0; i < n; i++)
+176:   {
+177:     p[i].x += dt * p[i].vx;
+178:     p[i].y += dt * p[i].vy;
+179:     p[i].z += dt * p[i].vz;
+180:   }
+181: }

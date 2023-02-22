@@ -1,0 +1,45 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 52 - 93
+--------------------------------------------------------------------------------
+
+52: {
+53:   //
+54:   const f32 softening = 1e-20;
+55: 
+56:   //
+57:   for (u64 i = 0; i < n; i++)
+58:   {
+59:     //
+60:     f32 fx = 0.0;
+61:     f32 fy = 0.0;
+62:     f32 fz = 0.0;
+63: 
+64:     // 23 floating-point operations
+65:     for (u64 j = 0; j < n; j++)
+66:     {
+67:       // Newton's law
+68:       const f32 dx = p[j].x - p[i].x;                                // 1
+69:       const f32 dy = p[j].y - p[i].y;                                // 2
+70:       const f32 dz = p[j].z - p[i].z;                                // 3
+71:       const f32 d_2 = (dx * dx) + (dy * dy) + (dz * dz) + softening; // 9
+72:       const f32 d_3_over_2 = pow(d_2, 3.0 / 2.0);                    // 11
+73: 
+74:       // Net force
+75:       fx += dx / d_3_over_2; // 13
+76:       fy += dy / d_3_over_2; // 15
+77:       fz += dz / d_3_over_2; // 17
+78:     }
+79: 
+80:     //
+81:     p[i].vx += dt * fx; // 19
+82:     p[i].vy += dt * fy; // 21
+83:     p[i].vz += dt * fz; // 23
+84:   }
+85: 
+86:   // 6 floating-point operations
+87:   for (u64 i = 0; i < n; i++)
+88:   {
+89:     p[i].x += dt * p[i].vx;
+90:     p[i].y += dt * p[i].vy;
+91:     p[i].z += dt * p[i].vz;
+92:   }
+93: }

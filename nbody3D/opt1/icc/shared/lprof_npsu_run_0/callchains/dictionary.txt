@@ -1,0 +1,8 @@
+__libc_start_main - :0
+libc-2.31.so
+.text@start - :0
+ld-2.31.so
+__get_cpu_features - :0
+__libc_secure_getenv - :0
+psiginfo - :0
+_IO_printf - :0

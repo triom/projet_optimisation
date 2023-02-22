@@ -1,0 +1,16 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 65 - 77
+--------------------------------------------------------------------------------
+
+65:     for (u64 j = 0; j < n; j++)
+66:     {
+67:       // Newton's law
+68:       const f32 dx = p[j].x - p[i].x;                                // 1
+69:       const f32 dy = p[j].y - p[i].y;                                // 2
+70:       const f32 dz = p[j].z - p[i].z;                                // 3
+71:       const f32 d_2 = (dx * dx) + (dy * dy) + (dz * dz) + softening; // 9
+72:       const f32 d_3_over_2 = pow(d_2, 3.0 / 2.0);                    // 11
+73: 
+74:       // Net force
+75:       fx += dx / d_3_over_2; // 13
+76:       fy += dy / d_3_over_2; // 15
+77:       fz += dz / d_3_over_2; // 17

@@ -1,0 +1,3 @@
+block_id;module;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;
+50;nbody3D;nbody.c:57-69;25.04;13.49;13.49;13.49;13.49;0;0;1;
+49;nbody3D;nbody.c:60-64;5.87;3.17;3.17;3.17;3.17;0;0;1;

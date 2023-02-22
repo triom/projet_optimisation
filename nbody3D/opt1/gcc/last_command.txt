@@ -1,0 +1,1 @@
+../nbody3D/maqao.intel64.2.16.0/maqao.intel64 oneview -R1 --output-format=all --executable=./nbody3D 50000 

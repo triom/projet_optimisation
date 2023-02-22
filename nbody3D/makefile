@@ -1,11 +1,24 @@
-all: nbody.g nbody.i
+CC=gcc
+IC=icc
+CX=icx
 
-nbody.g: nbody.c
-	gcc -march=native -mavx2 -Ofast -fopt-info-all=nbody.gcc.optrpt $< -o $@ -lm -fopenmp
+CFLAGS=-march=native -g3
 
-nbody.i: nbody.c
-	icc -xhost -Ofast -qopt-report $< -o $@ -qmkl -qopenmp
+OFLAGS=-O1 -fopenmp -fopt-info-all=nbody.gcc.optrpt 
+
+all: nbody3D nbody3DIC nbody3DCX
+
+nbody3D: nbody.c
+	$(CC) $(CFLAGS) $(OFLAGS) $< -o $@ -lm -fopenmp
+
+nbody3DIC: nbody.c
+	$(IC) -xhost -Ofast -qopt-report $< -o $@ -qmkl -qopenmp
+
+nbody3DCX: nbody.c
+	$(CX)  -xhost -Ofast -fsave-optimization-record $< -o $@ -qmkl -qopenmp 
 
 clean:
-	rm -Rf *~ nbody.g nbody.i *.optrpt
+	rm -Rf *~ nbody3D nbody3DIC nbody3DCX *.optrpt
+
+
 

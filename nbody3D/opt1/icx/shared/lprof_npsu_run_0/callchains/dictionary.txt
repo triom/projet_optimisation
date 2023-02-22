@@ -1,0 +1,3 @@
+.text@start - :0
+ld-2.31.so
+__get_cpu_features - :0

@@ -1,0 +1,11 @@
+function_id;module;function_name;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;cats;label_name;
+6;nbody3DIC;main;;88.8;1.58;;;;;;;"100,0,0,0,0,0,0,0,0,0";main;
+11;ld-2.31.so;_dl_rtld_di_serinfo;;7.56;0.13;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_rtld_di_serinfo;
+1859;libc-2.31.so;_dl_addr;;1.68;0.03;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_addr;
+24624;libmkl_intel_lp64.so.2;_Init_MKL_Loader;;0.28;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";_Init_MKL_Loader;
+11490;libmkl_core.so.2;__sti__$E;;0.28;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";__sti__$E;
+2886;libmkl_intel_thread.so.2;mkl_serv_thr_cleanup@plt;;0.28;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";mkl_serv_thr_cleanup@plt;
+2333;libmkl_core.so.2;getcwd@plt;;0.28;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";getcwd@plt;
+308;libc-2.31.so;vprintf;;0.28;0;;;;;;;"0,0,0,0,0,0,100,0,0,0";vprintf;
+236;libc-2.31.so;random_r;;0.28;0;;;;;;;"0,0,0,0,0,0,0,0,0,100";random_r;
+153;libpthread-2.31.so;__GI___pthread_mutex_lock;;0.28;0;;;;;;;"0,0,0,0,0,100,0,0,0,0";__GI___pthread_mutex_lock;

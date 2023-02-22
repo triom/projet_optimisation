@@ -1,0 +1,5 @@
+Node;Process;Thread;System (%);Binary (%);MPI (%);Nb Cycle Events;OMP (%);Others (%);String (%);Memory (%);IO (%);Time (s);Math (%);Pthread (%);
+_ALL;_ALL;_ALL;0;30.91;0;11540;0;0;0;0;0;57.7;69.09;0;
+DESKTOP-8JEBTPG;_ALL;_ALL;0;30.91;0;11540;0;0;0;0;0;57.7;69.09;0;
+DESKTOP-8JEBTPG;1686;_ALL;0;30.91;0;11540;0;0;0;0;0;57.7;69.09;0;
+DESKTOP-8JEBTPG;1686;1686;0;30.91;0;11540;0;0;0;0;0;57.7;69.09;0;

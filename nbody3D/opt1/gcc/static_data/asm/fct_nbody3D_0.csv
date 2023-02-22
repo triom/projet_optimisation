@@ -1,0 +1,9 @@
+address;source_location;insn;indent
+0x1000;:0;ENDBR64;
+0x1004;:0;SUB	$0x8,%RSP;
+0x1008;:0;MOV	0x2fd9(%RIP),%RAX;
+0x100f;:0;TEST	%RAX,%RAX;
+0x1012;:0;JE	1016 <_init+0x16>;
+0x1014;:0;CALL	%RAX;
+0x1016;:0;ADD	$0x8,%RSP;
+0x101a;:0;RET;

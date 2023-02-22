@@ -1,0 +1,7 @@
+********************************************************************************
+
+MAQAO 2.16.0 - 766cd4a6ff7535ecc31168278a1f4b2786663ebf::20221116-145906 || 2022/11/16
+
+../nbody3D/maqao.intel64.2.16.0/maqao.intel64 oneview -R1 --output-format=all --executable=./nbody3DCX 50000 
+
+CMD:   /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/../nbody3D/maqao.intel64.2.16.0/maqao.intel64 lprof  --xp="/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-22_13-34-31/tools/lprof_npsu_run_0" --mpi-command=""   -- /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-22_13-34-31/binaries/nbody3DCX

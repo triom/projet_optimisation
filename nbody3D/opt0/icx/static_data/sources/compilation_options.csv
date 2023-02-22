@@ -1,0 +1,2 @@
+module;src_file;score;issue;opts;
+nbody3DCX;nbody.c;0.75;"-g is missing, it is needed to have more accurate reports. ";" --intel -x host -Ofast -fsave-optimization-record nbody.c -o nbody3DCX -qmkl=parallel -fveclib=SVML -fheinous-gnu-extensions";
