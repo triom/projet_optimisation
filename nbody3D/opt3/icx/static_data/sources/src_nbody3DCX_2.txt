@@ -1,0 +1,21 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 261 - 278
+--------------------------------------------------------------------------------
+
+261: #pragma omp for schedule(guided)
+262:   for (u64 i = 0; i < n; i += 4)
+263:   {
+264:     p.arr_x[i] += dt * p.arr_vx[i];
+265:     p.arr_y[i] += dt * p.arr_vy[i];
+266:     p.arr_z[i] += dt * p.arr_vz[i];
+267: 
+268:     p.arr_x[i + 1] += dt * p.arr_vx[i + 1];
+269:     p.arr_y[i + 1] += dt * p.arr_vy[i + 1];
+270:     p.arr_z[i + 1] += dt * p.arr_vz[i + 1];
+271: 
+272:     p.arr_x[i + 2] += dt * p.arr_vx[i + 2];
+273:     p.arr_y[i + 2] += dt * p.arr_vy[i + 2];
+274:     p.arr_z[i + 2] += dt * p.arr_vz[i + 2];
+275: 
+276:     p.arr_x[i + 3] += dt * p.arr_vx[i + 3];
+277:     p.arr_y[i + 3] += dt * p.arr_vy[i + 3];
+278:     p.arr_z[i + 3] += dt * p.arr_vz[i + 3];

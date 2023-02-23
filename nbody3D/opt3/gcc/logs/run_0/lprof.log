@@ -1,0 +1,46 @@
+
+* Info: Selecting the 'perf-low-ppn' engine for node DESKTOP-8JEBTPG
+
+* Info: "ref-cycles" not supported on DESKTOP-8JEBTPG: fallback to "cpu-clock"
+* Info: Process launched (host DESKTOP-8JEBTPG, process 2502)
+[1mTotal memory size:[0m 786432 B, 768 KiB, 0 MiB
+
+[1m Step    Time, s Interact/s  GFLOP/s[0m
+    0  1.444e+00  1.858e+08      4.3 *
+    1  7.146e-01  3.756e+08      8.6 *
+    2  8.822e-01  3.043e+08      7.0 *
+    3  8.026e-01  3.344e+08      7.7 
+    4  5.082e-01  5.281e+08     12.1 
+    5  2.757e+00  9.736e+07      2.2 
+    6  1.020e+00  2.632e+08      6.1 
+    7  1.299e+00  2.066e+08      4.8 
+    8  1.223e+00  2.195e+08      5.0 
+    9  1.495e+00  1.796e+08      4.1 
+-----------------------------------------------------
+[1mAverage performance:      [42m       6.0 +- 2.9 GFLOP/s[0m
+-----------------------------------------------------
+
+* Info: Process finished (host DESKTOP-8JEBTPG, process 2502)
+* Info: Callchains info will be incomplete
+* Info: Try to recompile your application with -fno-omit-frame-pointer or to rerun with btm=stack
+* Info: Dumping samples (host DESKTOP-8JEBTPG, process 2502)
+* Info: Dumping source info for callchain nodes (host DESKTOP-8JEBTPG, process 2502)
+* Info: Building/writing metadata (host DESKTOP-8JEBTPG)
+* Info: Finished collect step (host DESKTOP-8JEBTPG, process 2502)
+
+Your experiment path is /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0
+
+To display your profiling results:
+###############################################################################################################################################################
+#    LEVEL    |     REPORT     |                                                           COMMAND                                                            #
+###############################################################################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0      #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0      #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-56-35/tools/lprof_npsu_run_0  #
+###############################################################################################################################################################
+

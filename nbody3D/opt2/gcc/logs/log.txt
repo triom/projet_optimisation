@@ -1,0 +1,13 @@
+********************************************************************************
+
+MAQAO 2.16.0 - 766cd4a6ff7535ecc31168278a1f4b2786663ebf::20221116-145906 || 2022/11/16
+
+../nbody3D/maqao.intel64.2.16.0/maqao.intel64 oneview -R1 --output-format=all --executable=./nbody3D 50000 
+
+CMD:   /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/../nbody3D/maqao.intel64.2.16.0/maqao.intel64 lprof  --xp="/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-22_23-04-00/tools/lprof_npsu_run_0" --mpi-command=""   -- /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-22_23-04-00/binaries/nbody3D
+1 functions were discarded from static analysis because their coverage
+are lower than object_coverage_threshold value (0.01%).
+That represents 0% of the execution time. To include them, change the value
+in the experiment directory configuration file, then rerun the command with the additionnal parameter
+--force-static-analysis
+

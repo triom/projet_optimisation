@@ -1,0 +1,4 @@
+loop_id;module;function_name;function_id;source_info;level;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;
+5;nbody3DCX;move_particles.extracted;11;;Single;42.86;0.54;;;;;;;
+2;nbody3DCX;move_particles;8;nbody.c:261-278;Innermost;0.4;0;;;;;;;
+1;nbody3DCX;move_particles;8;nbody.c:200-257;Single;0.4;0;;;;;;;

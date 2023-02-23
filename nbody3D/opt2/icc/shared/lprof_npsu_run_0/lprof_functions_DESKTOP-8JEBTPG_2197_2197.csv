@@ -1,0 +1,17 @@
+function_id;module;function_name;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;cats;label_name;
+6;nbody3DIC;main;;79.22;0.91;;;;;;;"100,0,0,0,0,0,0,0,0,0";main;
+11;ld-2.31.so;_dl_rtld_di_serinfo;;10.82;0.13;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_rtld_di_serinfo;
+1023;libiomp5.so;_INTERNAL8eaaea23::__kmp_hyper_barrier_gather(barrier_type, kmp_info*, int, int, void (*)(void*, void*), void*);;3.03;0.04;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_;
+1859;libc-2.31.so;_dl_addr;;1.73;0.02;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_addr;
+12092;libmkl_core.so.2;__sti__$E;;0.43;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";__sti__$E;
+4421;libmkl_intel_thread.so.2;mkl_serv_unlock@plt;;0.43;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";mkl_serv_unlock@plt;
+3158;libiomp5.so;__intel_avx_rep_memset;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__intel_avx_rep_memset;
+2790;libiomp5.so;__sti__$E;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__sti__$E;
+2662;libiomp5.so;__kmp_yield;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_yield;
+1621;libiomp5.so;__kmp_i18n_catopen;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_i18n_catopen;
+1038;libiomp5.so;_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;
+949;libc-2.31.so;__sched_yield;;0.43;0;;;;;;;"0,0,0,0,100,0,0,0,0,0";__sched_yield;
+506;libiomp5.so;__kmp_init_memkind;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_init_memkind;
+252;libm-2.31.so;__atan2_finite;;0.43;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";__atan2_finite;
+164;libiomp5.so;__kmp_itt_init_ittlib;;0.43;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_itt_init_ittlib;
+12;ld-2.31.so;_dl_debug_state;;0.43;0;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_debug_state;

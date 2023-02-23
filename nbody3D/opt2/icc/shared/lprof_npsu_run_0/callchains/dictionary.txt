@@ -1,0 +1,8 @@
+__kmp_invoke_microtask - :0
+libiomp5.so
+__kmp_invoke_task_func - :0
+.text@start - :0
+ld-2.31.so
+__get_cpu_features - :0
+__libc_secure_getenv - :0
+libc-2.31.so

@@ -1,0 +1,5 @@
+name;time_p;time_s;cpi_ratio;
+/opt/intel/oneapi/compiler/2023.0.0/linux/compiler/lib/intel64_lin/libiomp5.so;53.13;0.68;;
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/maqao_2023-02-23_11-58-32/binaries/nbody3DCX;46.62;0.6;;
+/usr/lib/x86_64-linux-gnu/libc-2.31.so;0.2;0;;
+/usr/lib/x86_64-linux-gnu/ld-2.31.so;0.05;0;;

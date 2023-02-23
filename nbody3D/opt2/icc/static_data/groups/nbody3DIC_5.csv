@@ -1,0 +1,2 @@
+group_size;pattern;opcodes;offsets;addresses;stride_status;stride;memory_status;accessed_memory;accessed_memory_nooverlap;accessed_memory_overlap;span;head;unroll_factor;
+8;LLLLLLLL;VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,VMASKMOVPS,;0,96,48,24,120,144,72,168,;0x402df4,0x402df9,0x402e05,0x402e0b,0x402e11,0x402e17,0x402e2c,0x402e32,;Not Analyzed;0;Success;128;128;0;184;0;1;

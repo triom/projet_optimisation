@@ -1,0 +1,14 @@
+function_id;module;function_name;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;cats;label_name;
+11;nbody3DCX;move_particles.extracted;;43.92;0.56;;;;;;;"100,0,0,0,0,0,0,0,0,0";move_particles.extracted;
+1021;libiomp5.so;bool _INTERNAL8eaaea23::__kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*);;21.96;0.28;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2319__kmp_wait_templateI11kmp_flag_64ILb0ELb1EELb1ELb0ELb1EEEbP8kmp_infoPT_Pv;
+1038;libiomp5.so;_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;;10.59;0.13;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;
+1023;libiomp5.so;_INTERNAL8eaaea23::__kmp_hyper_barrier_gather(barrier_type, kmp_info*, int, int, void (*)(void*, void*), void*);;7.84;0.1;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_;
+1065;libiomp5.so;kmp_flag_native<unsigned long long, (flag_type)1, true>::notdone_check();;6.67;0.08;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN15kmp_flag_nativeIyL9flag_type1ELb1EE13notdone_checkEv;
+1027;libiomp5.so;_INTERNAL8eaaea23::__kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*);;4.71;0.06;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2327__kmp_hyper_barrier_releaseE12barrier_typeP8kmp_infoiiiPv;
+1847;libiomp5.so;__kmp_launch_thread;;0.78;0.01;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_launch_thread;
+1153;libiomp5.so;__kmpc_reduce;;0.78;0.01;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmpc_reduce;
+1063;libiomp5.so;kmp_flag_native<unsigned long long, (flag_type)1, true>::done_check();;0.78;0.01;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN15kmp_flag_nativeIyL9flag_type1ELb1EE10done_checkEv;
+10;nbody3DCX;move_particles_tree_reduce_20;;0.78;0.01;;;;;;;"100,0,0,0,0,0,0,0,0,0";move_particles_tree_reduce_20;
+2637;libiomp5.so;__kmp_invoke_microtask;;0.39;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_invoke_microtask;
+2152;libiomp5.so;__kmp_finish_implicit_task;;0.39;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__kmp_finish_implicit_task;
+949;libc-2.31.so;__sched_yield;;0.39;0;;;;;;;"0,0,0,0,100,0,0,0,0,0";__sched_yield;

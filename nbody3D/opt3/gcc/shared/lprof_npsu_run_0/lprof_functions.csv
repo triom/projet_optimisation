@@ -1,0 +1,9 @@
+function_id;module;function_name;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;cats;label_name;
+256;libgomp.so.1.0.0;omp_get_num_procs;;56.82;6.63;6.41;6.58;6.72;0.77669042348862;0.096026256680489;8;"0,0,100,0,0,0,0,0,0,0";omp_get_num_procs;
+6;nbody3D;move_particles._omp_fn.0;nbody.c:208-251;42.66;4.98;4.76;4.94;5.05;0.92949569225311;0.10789985209703;8;"100,0,0,0,0,0,0,0,0,0";move_particles._omp_fn.0;
+240;libgomp.so.1.0.0;omp_in_final;;0.25;0.03;0.01;0.03;0.07;0.15994873642921;0.018468117341399;8;"0,0,100,0,0,0,0,0,0,0";omp_in_final;
+109;libgomp.so.1.0.0;GOMP_atomic_start;;0.09;0.01;0;0.01;0.03;0.064519979059696;0.0075277267023921;6;"0,0,100,0,0,0,0,0,0,0";GOMP_atomic_start;
+110;libgomp.so.1.0.0;GOMP_atomic_end;;0.08;0.01;0;0.01;0.02;0.046082325279713;0.0053452244028449;7;"0,0,100,0,0,0,0,0,0,0";GOMP_atomic_end;
+255;libgomp.so.1.0.0;omp_test_nest_lock;;0.05;0.01;0;0.01;0.01;0.033892575651407;0.0039339787326753;7;"0,0,100,0,0,0,0,0,0,0";omp_test_nest_lock;
+209;libgomp.so.1.0.0;omp_get_num_threads;;0.04;0;0;0.01;0.01;0.023837126791477;0.002738612703979;5;"0,0,100,0,0,0,0,0,0,0";omp_get_num_threads;
+226;libgomp.so.1.0.0;GOMP_single_copy_end;;0.02;0;0.01;0.01;0.01;0;0;1;"0,0,100,0,0,0,0,0,0,0";GOMP_single_copy_end;

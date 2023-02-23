@@ -1,0 +1,42 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 213 - 251
+--------------------------------------------------------------------------------
+
+213:       const f32 dx1 = p.arr_x[j] - p.arr_x[i];
+214:       const f32 dy1 = p.arr_y[j] - p.arr_y[i];
+215:       const f32 dz1 = p.arr_z[j] - p.arr_z[i];
+216:       const f32 d_2_1 = (dx1 * dx1) + (dy1 * dy1) + (dz1 * dz1) + softening;
+217:       const f32 d_3_over_2_1 = 1.0f / (d_2_1 * sqrtf(d_2_1));
+218: 
+219:       fx += dx1 * (1 / d_3_over_2_1);
+220:       fy += dy1 * (1 / d_3_over_2_1);
+221:       fz += dz1 * (1 / d_3_over_2_1);
+222: 
+223:       const f32 dx2 = p.arr_x[j + 1] - p.arr_x[i];
+224:       const f32 dy2 = p.arr_y[j + 1] - p.arr_y[i];
+225:       const f32 dz2 = p.arr_z[j + 1] - p.arr_z[i];
+226:       const f32 d_2_2 = (dx2 * dx2) + (dy2 * dy2) + (dz2 * dz2) + softening;
+227:       const f32 d_3_over_2_2 = 1.0f / (d_2_2 * sqrtf(d_2_2));
+228: 
+229:       fx += dx2 * (1 / d_3_over_2_2);
+230:       fy += dy2 * (1 / d_3_over_2_2);
+231:       fz += dz2 * (1 / d_3_over_2_2);
+232: 
+233:       const f32 dx3 = p.arr_x[j + 2] - p.arr_x[i];
+234:       const f32 dy3 = p.arr_y[j + 2] - p.arr_y[i];
+235:       const f32 dz3 = p.arr_z[j + 2] - p.arr_z[i];
+236:       const f32 d_2_3 = (dx3 * dx3) + (dy3 * dy3) + (dz3 * dz3) + softening;
+237:       const f32 d_3_over_2_3 = 1.0f / (d_2_3 * sqrtf(d_2_3));
+238: 
+239:       fx += dx3 * (1 / d_3_over_2_3);
+240:       fy += dy3 * (1 / d_3_over_2_3);
+241:       fz += dz3 * (1 / d_3_over_2_3);
+242: 
+243:       const f32 dx4 = p.arr_x[j + 3] - p.arr_x[i];
+244:       const f32 dy4 = p.arr_y[j + 3] - p.arr_y[i];
+245:       const f32 dz4 = p.arr_z[j + 3] - p.arr_z[i];
+246:       const f32 d_2_4 = (dx4 * dx4) + (dy4 * dy4) + (dz4 * dz4) + softening;
+247:       const f32 d_3_over_2_4 = 1.0f / (d_2_4 * sqrtf(d_2_4));
+248: 
+249:       fx += dx4 * (1 / d_3_over_2_4);
+250:       fy += dy4 * (1 / d_3_over_2_4);
+251:       fz += dz4 * (1 / d_3_over_2_4);

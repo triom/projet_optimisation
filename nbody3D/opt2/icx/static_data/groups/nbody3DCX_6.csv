@@ -1,0 +1,7 @@
+group_size;pattern;opcodes;offsets;addresses;stride_status;stride;memory_status;accessed_memory;accessed_memory_nooverlap;accessed_memory_overlap;span;head;unroll_factor;
+1;L;VSUBPS,;176,;0x402fa3,;Not Analyzed;0;Success;32;32;0;32;0;1;
+2;LL;VGATHERQPS,VGATHERQPS,;4,8,;0x402f55,0x402f76,;Iteration not constant;0;Success;32;20;12;20;0;2;
+1;L;VGATHERQPS,;0,;0x402f2f,;Iteration not constant;0;Success;16;16;0;16;0;1;
+2;LL;VGATHERQPS,VGATHERQPS,;4,8,;0x402f63,0x402f88,;Iteration not constant;0;Success;32;20;12;20;0;2;
+4;LLLL;VPADDQ,VPADDQ,VBROADCASTSS,VBROADCASTSS,;49478,49494,49224,49156,;0x402f12,0x402f22,0x402fbb,0x403003,;RIP based value;0;Success;72;56;16;370;0;1;
+1;L;VGATHERQPS,;0,;0x402f39,;Iteration not constant;0;Success;16;16;0;16;0;1;

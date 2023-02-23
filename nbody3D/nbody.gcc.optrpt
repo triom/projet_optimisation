@@ -1,0 +1,75 @@
+nbody.c:356:3: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:354:3: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:353:3: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:339:5: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:313:3: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:310:3: optimized:   Inlining printf/15 into main/41 (always_inline).
+nbody.c:286:30: optimized:   Inlining atoll/25 into main/41 (always_inline).
+nbody.c:247:48: missed:   not inlinable: move_particles._omp_fn.0/43 -> sqrtf/48, function body not available
+nbody.c:237:48: missed:   not inlinable: move_particles._omp_fn.0/43 -> sqrtf/48, function body not available
+nbody.c:227:48: missed:   not inlinable: move_particles._omp_fn.0/43 -> sqrtf/48, function body not available
+nbody.c:217:48: missed:   not inlinable: move_particles._omp_fn.0/43 -> sqrtf/48, function body not available
+missed:   not inlinable: move_particles._omp_fn.0/43 -> __builtin_omp_get_thread_num/47, function body not available
+missed:   not inlinable: move_particles._omp_fn.0/43 -> __builtin_omp_get_num_threads/46, function body not available
+missed:   not inlinable: move_particles._omp_fn.0/43 -> __builtin_GOMP_atomic_end/45, function body not available
+missed:   not inlinable: move_particles._omp_fn.0/43 -> __builtin_GOMP_atomic_start/44, function body not available
+nbody.c:364:3: missed:   not inlinable: main/41 -> free/58, function body not available
+nbody.c:363:3: missed:   not inlinable: main/41 -> free/58, function body not available
+nbody.c:362:3: missed:   not inlinable: main/41 -> free/58, function body not available
+nbody.c:361:3: missed:   not inlinable: main/41 -> free/58, function body not available
+nbody.c:360:3: missed:   not inlinable: main/41 -> free/58, function body not available
+nbody.c:359:3: missed:   not inlinable: main/41 -> free/58, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+nbody.c:351:11: missed:   not inlinable: main/41 -> sqrt/57, function body not available
+nbody.c:346:5: missed:   not inlinable: main/41 -> fflush/55, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+nbody.c:324:21: missed:   not inlinable: main/41 -> omp_get_wtime/56, function body not available
+nbody.c:322:5: missed:   not inlinable: main/41 -> move_particles/40, function not inline candidate
+nbody.c:320:23: missed:   not inlinable: main/41 -> omp_get_wtime/56, function body not available
+nbody.c:314:3: missed:   not inlinable: main/41 -> fflush/55, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/41 -> __printf_chk/60, function body not available
+nbody.c:306:3: missed:   not inlinable: main/41 -> init/39, function not inline candidate
+nbody.c:303:14: missed:   not inlinable: main/41 -> malloc/53, function body not available
+nbody.c:302:14: missed:   not inlinable: main/41 -> malloc/53, function body not available
+nbody.c:301:14: missed:   not inlinable: main/41 -> malloc/53, function body not available
+nbody.c:300:13: missed:   not inlinable: main/41 -> malloc/53, function body not available
+nbody.c:299:13: missed:   not inlinable: main/41 -> malloc/53, function body not available
+nbody.c:298:13: missed:   not inlinable: main/41 -> malloc/53, function body not available
+/usr/include/stdlib.h:375:10: missed:   not inlinable: main/41 -> strtoll/59, function body not available
+missed:   not inlinable: move_particles/40 -> __builtin_GOMP_loop_end/52, function body not available
+missed:   not inlinable: move_particles/40 -> __builtin_GOMP_loop_ull_nonmonotonic_guided_next/51, function body not available
+missed:   not inlinable: move_particles/40 -> __builtin_GOMP_loop_ull_nonmonotonic_guided_start/50, function body not available
+missed:   not inlinable: move_particles/40 -> __builtin_GOMP_parallel/49, function body not available
+nbody.c:38:24: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:37:31: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:36:24: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:33:30: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:32:23: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:31:30: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:27:19: missed:   not inlinable: init/39 -> rand/42, function body not available
+nbody.c:26:19: missed:   not inlinable: init/39 -> rand/42, function body not available
+Unit growth for small function inlining: 600->600 (0%)
+
+Inlined 7 calls, eliminated 0 functions
+
+nbody.c:213:24: missed: failed: evolution of base is not affine.
+nbody.c:213:30: missed: failed: evolution of base is not affine.
+nbody.c:213:43: missed: failed: evolution of base is not affine.
+nbody.c:214:24: missed: failed: evolution of base is not affine.
+nbody.c:214:30: missed: failed: evolution of base is not affine.
+nbody.c:214:43: missed: failed: evolution of base is not affine.
+nbody.c:215:24: missed: failed: evolution of base is not affine.
+nbody.c:215:30: missed: failed: evolution of base is not affine.
+nbody.c:215:43: missed: failed: evolution of base is not affine.
+nbody.c:217:48: missed: statement clobbers memory: sqrtf (d_2_1_75);
+nbody.c:213:7: missed: couldn't vectorize loop
+nbody.c:213:7: missed: not vectorized: control flow in loop.
+nbody.c:208:9: note: vectorized 0 loops in function.
+nbody.c:208:9: optimized: loop turned into non-loop; it never loops
+nbody.c:208:9: optimized: loop turned into non-loop; it never loops
+nbody.c:208:9: missed: missed loop optimization: niters analysis ends up with assumptions.
+nbody.c:193:6: note: vectorized 0 loops in function.
+nbody.c:193:6: missed: missed loop optimization: niters analysis ends up with assumptions.

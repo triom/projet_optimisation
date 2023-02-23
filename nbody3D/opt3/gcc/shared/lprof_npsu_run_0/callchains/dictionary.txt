@@ -1,0 +1,2 @@
+GOMP_parallel - :0
+libgomp.so.1.0.0

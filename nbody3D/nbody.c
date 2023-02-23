@@ -13,13 +13,12 @@ typedef unsigned long long u64;
 typedef struct particle_s
 {
 
-  f32 x, y, z;
-  f32 vx, vy, vz;
+  f32 *arr_x, *arr_y, *arr_z, *arr_vx, *arr_vy, *arr_vz;
 
 } particle_t;
 
 //
-void init(particle_t *p, u64 n)
+void init(particle_t p, u64 n)
 {
   for (u64 i = 0; i < n; i++)
   {
@@ -29,14 +28,14 @@ void init(particle_t *p, u64 n)
     f32 sign = (r1 > r2) ? 1 : -1;
 
     //
-    p[i].x = sign * (f32)rand() / (f32)RAND_MAX;
-    p[i].y = (f32)rand() / (f32)RAND_MAX;
-    p[i].z = sign * (f32)rand() / (f32)RAND_MAX;
+    p.arr_x[i] = sign * (f32)rand() / (f32)RAND_MAX;
+    p.arr_y[i] = (f32)rand() / (f32)RAND_MAX;
+    p.arr_z[i] = sign * (f32)rand() / (f32)RAND_MAX;
 
     //
-    p[i].vx = (f32)rand() / (f32)RAND_MAX;
-    p[i].vy = sign * (f32)rand() / (f32)RAND_MAX;
-    p[i].vz = (f32)rand() / (f32)RAND_MAX;
+    p.arr_vx[i] = (f32)rand() / (f32)RAND_MAX;
+    p.arr_vy[i] = sign * (f32)rand() / (f32)RAND_MAX;
+    p.arr_vz[i] = (f32)rand() / (f32)RAND_MAX;
   }
 }
 
@@ -133,20 +132,21 @@ void move_particles(particle_t *p, const f32 dt, u64 n)
     p[i + 3].z += dt * p[i + 3].vz;
   }
 }
-#endif
 
+#elif defined OPT2
 //
 void move_particles(particle_t *p, const f32 dt, u64 n)
 {
+  u64 i, j;
+  f32 fx, fy, fz;
   //
   const f32 softening = 1e-20;
 
-//
-#pragma omp parallel private(i, j) shared(softening, fx, fy, fz) scheduled(guided)
+  //
+#pragma omp parallel private(i, j) shared(softening, fx, fy, fz)
   {
-#pragma omp unroll full reduction(+ \
-                                  : fx, fy, fz)
-    for (u64 i = 0; i < n; i++)
+#pragma omp for schedule(guided)
+    for (i = 0; i < n; i++)
     {
       //
       f32 fx = 0.0;
@@ -154,7 +154,9 @@ void move_particles(particle_t *p, const f32 dt, u64 n)
       f32 fz = 0.0;
 
       // 23 floating-point operations
-      for (u64 j = 0; j < n; j++)
+#pragma omp simd reduction(+ \
+                           : fx, fy, fz)
+      for (j = 0; j < n; j++)
       {
         // Newton's law
         const f32 dx = p[j].x - p[i].x;                                // 1 (sub)
@@ -176,14 +178,104 @@ void move_particles(particle_t *p, const f32 dt, u64 n)
     }
 
     // 3 floating-point operations
-#pragma omp unroll full reduction(+ \
-                                  : p[i].x, p[i].y, p[i].z)
+
+#pragma omp for schedule(guided)
     for (u64 i = 0; i < n; i++)
     {
       p[i].x += dt * p[i].vx;
       p[i].y += dt * p[i].vy;
       p[i].z += dt * p[i].vz;
     }
+  }
+}
+#endif
+
+void move_particles(particle_t p, const f32 dt, u64 n)
+{
+  f32 fx, fy, fz;
+  const f32 softening = 1e-20;
+  u64 i, j;
+
+  //
+  for (i = 0; i < n; i++)
+  {
+    //
+    f32 fx = 0.0;
+    f32 fy = 0.0;
+    f32 fz = 0.0;
+
+    // 23 floating-point operations
+#pragma omp parallel for simd shared(p, softening) reduction(+ \
+                                                             : fx, fy, fz)
+    for (j = 0; j < n; j += 4)
+    {
+      // Newton's law
+      const f32 dx1 = p.arr_x[j] - p.arr_x[i];
+      const f32 dy1 = p.arr_y[j] - p.arr_y[i];
+      const f32 dz1 = p.arr_z[j] - p.arr_z[i];
+      const f32 d_2_1 = (dx1 * dx1) + (dy1 * dy1) + (dz1 * dz1) + softening;
+      const f32 d_3_over_2_1 = 1.0f / (d_2_1 * sqrtf(d_2_1));
+
+      fx += dx1 * (1 / d_3_over_2_1);
+      fy += dy1 * (1 / d_3_over_2_1);
+      fz += dz1 * (1 / d_3_over_2_1);
+
+      const f32 dx2 = p.arr_x[j + 1] - p.arr_x[i];
+      const f32 dy2 = p.arr_y[j + 1] - p.arr_y[i];
+      const f32 dz2 = p.arr_z[j + 1] - p.arr_z[i];
+      const f32 d_2_2 = (dx2 * dx2) + (dy2 * dy2) + (dz2 * dz2) + softening;
+      const f32 d_3_over_2_2 = 1.0f / (d_2_2 * sqrtf(d_2_2));
+
+      fx += dx2 * (1 / d_3_over_2_2);
+      fy += dy2 * (1 / d_3_over_2_2);
+      fz += dz2 * (1 / d_3_over_2_2);
+
+      const f32 dx3 = p.arr_x[j + 2] - p.arr_x[i];
+      const f32 dy3 = p.arr_y[j + 2] - p.arr_y[i];
+      const f32 dz3 = p.arr_z[j + 2] - p.arr_z[i];
+      const f32 d_2_3 = (dx3 * dx3) + (dy3 * dy3) + (dz3 * dz3) + softening;
+      const f32 d_3_over_2_3 = 1.0f / (d_2_3 * sqrtf(d_2_3));
+
+      fx += dx3 * (1 / d_3_over_2_3);
+      fy += dy3 * (1 / d_3_over_2_3);
+      fz += dz3 * (1 / d_3_over_2_3);
+
+      const f32 dx4 = p.arr_x[j + 3] - p.arr_x[i];
+      const f32 dy4 = p.arr_y[j + 3] - p.arr_y[i];
+      const f32 dz4 = p.arr_z[j + 3] - p.arr_z[i];
+      const f32 d_2_4 = (dx4 * dx4) + (dy4 * dy4) + (dz4 * dz4) + softening;
+      const f32 d_3_over_2_4 = 1.0f / (d_2_4 * sqrtf(d_2_4));
+
+      fx += dx4 * (1 / d_3_over_2_4);
+      fy += dy4 * (1 / d_3_over_2_4);
+      fz += dz4 * (1 / d_3_over_2_4);
+    }
+    //
+    //
+    p.arr_vx[i] += dt * fx; // 19
+    p.arr_vy[i] += dt * fy; // 21
+    p.arr_vz[i] += dt * fz; // 23
+  }
+  // 6 floating-point operations
+
+#pragma omp for schedule(guided)
+  for (u64 i = 0; i < n; i += 4)
+  {
+    p.arr_x[i] += dt * p.arr_vx[i];
+    p.arr_y[i] += dt * p.arr_vy[i];
+    p.arr_z[i] += dt * p.arr_vz[i];
+
+    p.arr_x[i + 1] += dt * p.arr_vx[i + 1];
+    p.arr_y[i + 1] += dt * p.arr_vy[i + 1];
+    p.arr_z[i + 1] += dt * p.arr_vz[i + 1];
+
+    p.arr_x[i + 2] += dt * p.arr_vx[i + 2];
+    p.arr_y[i + 2] += dt * p.arr_vy[i + 2];
+    p.arr_z[i + 2] += dt * p.arr_vz[i + 2];
+
+    p.arr_x[i + 3] += dt * p.arr_vx[i + 3];
+    p.arr_y[i + 3] += dt * p.arr_vy[i + 3];
+    p.arr_z[i + 3] += dt * p.arr_vz[i + 3];
   }
 }
 
@@ -202,7 +294,13 @@ int main(int argc, char **argv)
   const u64 warmup = 3;
 
   //
-  particle_t *p = malloc(sizeof(particle_t) * n);
+  particle_t p;
+  p.arr_x = malloc(sizeof(f32) * n);
+  p.arr_y = malloc(sizeof(f32) * n);
+  p.arr_z = malloc(sizeof(f32) * n);
+  p.arr_vx = malloc(sizeof(f32) * n);
+  p.arr_vy = malloc(sizeof(f32) * n);
+  p.arr_vz = malloc(sizeof(f32) * n);
 
   //
   init(p, n);
@@ -258,10 +356,14 @@ int main(int argc, char **argv)
   printf("-----------------------------------------------------\n");
 
   //
-  free(p);
+  free(p.arr_x);
+  free(p.arr_y);
+  free(p.arr_z);
+  free(p.arr_vx);
+  free(p.arr_vy);
+  free(p.arr_vz);
 
   //
   return 0;
 }
 
-// maqao.intel64 oneview -R1  -WS c=config.lua xp=Parallel

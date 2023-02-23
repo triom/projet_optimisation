@@ -1,0 +1,5 @@
+module;src_file;score;issue;opts;
+nbody3DCX;nbody.c;0.75;"-g is missing, it is needed to have more accurate reports. ";" --intel -x host -Ofast -fsave-optimization-record nbody.c -o nbody3DCX -qmkl=parallel -fiopenmp -fveclib=SVML -fheinous-gnu-extensions";
+nbody3DCX;;0.25;"-g is missing, it is needed to have more accurate reports. ";"";
+nbody3DCX;;0.25;"-O2, -O3 or -Ofast is missing. ";"";
+nbody3DCX;;0.25;"-x(target) or -ax(target) is missing. ";"";

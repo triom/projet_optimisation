@@ -1,0 +1,13 @@
+main - /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:324
+nbody3DCX
+move_particles.extracted - /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:208
+__kmpc_fork_call - :0
+libiomp5.so
+move_particles - /mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c:208
+_INTERNALe6eb7363::__kmp_launch_worker(void*) - :0
+start_thread - :0
+libpthread-2.31.so
+__kmp_invoke_task_func - :0
+.text@start - :0
+ld-2.31.so
+__get_cpu_features - :0

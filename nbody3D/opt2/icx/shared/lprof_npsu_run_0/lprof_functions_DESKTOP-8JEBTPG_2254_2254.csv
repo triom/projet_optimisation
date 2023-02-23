@@ -1,0 +1,14 @@
+function_id;module;function_name;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;cats;label_name;
+11;nbody3DCX;move_particles.extracted;;87.85;1.08;;;;;;;"100,0,0,0,0,0,0,0,0,0";move_particles.extracted;
+11;ld-2.31.so;_dl_rtld_di_serinfo;;6.07;0.07;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_rtld_di_serinfo;
+1023;libiomp5.so;_INTERNAL8eaaea23::__kmp_hyper_barrier_gather(barrier_type, kmp_info*, int, int, void (*)(void*, void*), void*);;1.21;0.01;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_;
+1859;libc-2.31.so;_dl_addr;;0.81;0.01;;;;;;;"0,0,0,0,100,0,0,0,0,0";_dl_addr;
+1038;libiomp5.so;_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;;0.81;0.01;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL8eaaea2326__kmp_hyper_barrier_gatherE12barrier_typeP8kmp_infoiiPFvPvS3_ES3_..0;
+30894;libmkl_core.so.2;mkl_serv_strnlen_s;;0.4;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";mkl_serv_strnlen_s;
+2790;libiomp5.so;__sti__$E;;0.4;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__sti__$E;
+2078;libiomp5.so;_INTERNAL5aa4a1df::__kmp_stg_cmp(void const*, void const*);;0.4;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";_ZN17_INTERNAL5aa4a1df13__kmp_stg_cmpEPKvS1_;
+1481;libiomp5.so;__sti__$E;;0.4;0;;;;;;;"0,0,100,0,0,0,0,0,0,0";__sti__$E;
+373;libc-2.31.so;_IO_puts;;0.4;0;;;;;;;"0,0,0,0,0,0,100,0,0,0";_IO_puts;
+255;libm-2.31.so;__exp_finite;;0.4;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";__exp_finite;
+232;libc-2.31.so;random;;0.4;0;;;;;;;"0,0,0,0,0,0,0,0,0,100";random;
+0;libmkl_intel_lp64.so.2;_init;;0.4;0;;;;;;;"0,0,0,100,0,0,0,0,0,0";_init;

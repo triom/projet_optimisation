@@ -1,0 +1,7 @@
+block_id;module;source_info;time_p;time_s;time_s_min;time_s_avg;time_s_max;cov_deviation;time_deviation;nb_threads;
+44;nbody3D;nbody.c:237-247;11.18;1.29;;;;;;;
+40;nbody3D;nbody.c:217-227;10.62;1.23;;;;;;;
+42;nbody3D;nbody.c:227-237;9.97;1.16;;;;;;;
+46;nbody3D;nbody.c:247-251;9.15;1.06;;;;;;;
+38;nbody3D;nbody.c:213-217;2.33;0.27;;;;;;;
+36;nbody3D;nbody.c:208-213;0.04;0;;;;;;;

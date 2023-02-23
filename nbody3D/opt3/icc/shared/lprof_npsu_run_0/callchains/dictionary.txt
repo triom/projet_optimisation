@@ -1,0 +1,16 @@
+__kmp_invoke_microtask - :0
+libiomp5.so
+__kmp_invoke_task_func - :0
+main - :0
+nbody3DIC
+__libc_start_main - :0
+libc-2.31.so
+_INTERNAL8eaaea23::__kmp_hyper_barrier_gather(barrier_type, kmp_info*, int, int, void (*)(void*, void*), void*) - :0
+.text@start - :0
+ld-2.31.so
+__get_cpu_features - :0
+move_particles - :0
+_INTERNALe6eb7363::__kmp_launch_worker(void*) - :0
+start_thread - :0
+libpthread-2.31.so
+__kmpc_fork_call - :0

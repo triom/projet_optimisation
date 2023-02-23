@@ -1,0 +1,16 @@
+/mnt/d/isty/IATIC5/new/projet_optimisation/nbody3D/nbody.c: 200 - 257
+--------------------------------------------------------------------------------
+
+200:   for (i = 0; i < n; i++)
+201:   {
+202:     //
+203:     f32 fx = 0.0;
+204:     f32 fy = 0.0;
+205:     f32 fz = 0.0;
+206: 
+207:     // 23 floating-point operations
+208: #pragma omp parallel for simd shared(p, softening) reduction(+ \
+[...]
+255:     p.arr_vx[i] += dt * fx; // 19
+256:     p.arr_vy[i] += dt * fy; // 21
+257:     p.arr_vz[i] += dt * fz; // 23
